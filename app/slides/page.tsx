@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { getIdea, getSession } from '@/lib/utils/localStorage'
+import { getIdea, getSession, saveSession } from '@/lib/utils/localStorage'
 
 export default function SlidesPage() {
   const searchParams = useSearchParams()
@@ -66,12 +66,17 @@ export default function SlidesPage() {
 
     setLoading(true)
     try {
+      // Save outline to session first
+      const updatedSession = { ...session, outline: JSON.stringify(outline) }
+      saveSession(updatedSession)
+
       const res = await fetch('/api/slides-local', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ideaTitle: idea.title,
-          outline: outline
+          outline: outline,
+          ideaId: ideaId
         })
       })
 
