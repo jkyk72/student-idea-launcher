@@ -113,7 +113,7 @@ export const sendConfirmationEmail = async (
   ideaTitle: string
 ): Promise<boolean> => {
   try {
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
       secure: false,
