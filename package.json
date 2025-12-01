@@ -1,0 +1,40 @@
+{
+  "name": "student-idea-launcher",
+  "version": "1.0.0",
+  "description": "Student Idea Launcher - AI壁打ち〜スライド化〜権利保全〜税理士連携ツール",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.84.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "crypto-js": "^4.2.0",
+    "googleapis": "^166.0.0",
+    "jspdf": "^3.0.4",
+    "next": "^16.0.4",
+    "nodemailer": "^7.0.10",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/crypto-js": "^4.2.2",
+    "@types/nodemailer": "^7.0.4",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17"
+  }
+}
